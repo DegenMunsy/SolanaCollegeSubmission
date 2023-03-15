@@ -1,0 +1,68 @@
+/* set font size to 22px for the doc */
+html {
+    font-size: 22px;
+}
+/* change background to dark + font color to white */
+body {
+    background-color: #333;
+    color: antiquewhite;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2p';
+    background-color: #333;
+    color: antiquewhite;
+    height: 100vh;
+}
+.center, .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    display: none;
+}
+
+#click {
+    display: none;
+}
+
+.click-me {
+    display: block;
+    width: 160px;
+    height: 50px;
+    background: #1a1a1a;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 21px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.click-me:hover {
+    background: #9900ff;
+}
+
+.content {
+    width: 400px;
+    height: 350px;
+    background: #1a1a1a;
+    border-radius: 3px;
+    box-shadow: 0 2px 12px 0 #8f8c8c;
+}
+
+.header {
+    height: 70px;
+    background: #8f8c8c;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 #333;
+}
+
+/* Try your own styles on the <h1>, ,<img> */

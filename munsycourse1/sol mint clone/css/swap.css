@@ -1,0 +1,177 @@
+/* set font size to 22px for the doc */
+html {
+    font-size: 22px;
+}
+/* change background to dark + font color to white */
+/* sets the background color to dark gray and the font color to antiquewhite */
+body {
+    background-color: #1f1e1e;
+    color: antiquewhite;
+}
+    
+    /* uses flexbox for layout, sets the direction of the flex container to column, and aligns the items to the center */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+    /* uses flexbox for layout, centers the items along the main axis and sets the background color to dark gray */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Press Start 2p';
+}
+  
+nav ul {
+    display: flex; /* uses flexbox for layout */
+    justify-content: space-between; /* distributes items evenly along the main axis with space in between */
+    list-style: none; /* removes the default bullet points for the list items */
+    margin: 0; /* removes any default margin */
+    padding: 0; /* removes any default padding */
+    width: 100%; /* sets the width of the navigation to be 100% of its container */
+}
+  
+nav li {
+    flex: 1; /* sets the flex value to 1, allowing the items to distribute evenly */
+    text-align: center; /* centers the text within the list item */
+    font-family: 'Press Start 2p';
+}
+  
+nav a {
+    display: block; /* makes the anchor tag a block-level element */
+    color: #fff; /* sets the color of the link to white */
+    text-decoration: none; /* removes any default text decoration, such as an underline */
+    padding: 1em; /* adds padding to the link to create space between it and the list item */
+}
+  
+main {
+    display: flex; /* uses flexbox for layout */
+    flex-direction: column; /*sets the flex direction to column, stacks child elements vertically */
+    align-items: center; /*centers child elements horizontally */
+    justify-content: center; /* centers child elements vertically */
+    height: 100vh; /* sets the height of the main element to 100% of the viewport height */
+    
+}
+
+h2 {
+    font-family: 'Press Start 2p';
+    font-size: 0.8em;
+}
+
+#labelA {
+    font-family: 'Press Start 2p';
+    font-size: 0.7em;
+}
+
+#ULC {
+    font-family: 'Press Start 2p';
+    font-size: 0.7em;
+}
+
+#ULB {
+    font-family: 'Press Start 2p';
+    font-size: 0.7em;
+}
+
+#for-example {
+    font-family: 'Press Start 2p';
+}
+
+.box1 {
+    display: flex; /* uses flexbox for layout */
+    position: absolute; /* positions the element relative to the nearest positioned ancestor element */
+    top: 708px; /* sets the top offset from the top of the positioned ancestor element */
+    right: 500px; /* sets the right offset from the right of the positioned ancestor element */
+    font-family: 'Press Start 2p';
+    }
+
+    .button1 {
+        font-family: 'Press Start 2p'; /* sets the font family for the text */
+        font-size: 0.5em; /* sets the font size for the text */
+        font-weight: 800; /* sets the font weight for the text */
+        padding: 10px 20px 10px 20px; /* sets the padding for the element */
+        color: #363535; /* sets the text color */
+        border: none; /* removes any border */
+        border-radius: 0px; /* sets the border radius to 0 */
+        background: rgb(138, 115, 115); /* sets the background color */
+        text-decoration: none; /* removes any default text decoration */
+        cursor: pointer; /* sets the cursor to be a pointer */
+        transition: all 0.3s ease-out; /* adds a transition effect to all CSS properties, over a duration of 0.3 seconds with an ease-out timing function */
+        }
+
+/* Style changes for button1 when it is hovered over */
+.button1:hover {
+    background-color: rgb(184, 0, 0);
+    color: rgb(31, 26, 26);
+    }
+    
+    /* Style changes for overlay1 class */
+.overlay1 {
+    position: absolute; /* sets position as absolute */
+    top: -200px; /* sets top position as -200px */
+    bottom: 0; /* sets bottom position as 0 */
+    left: 0; /* sets left position as 0 */
+    right: 0; /* sets right position as 0 */
+    background: rgba(0, 0, 0, 0.8); /* sets background color with an alpha value */
+    color: rgb(138, 115, 115); /* sets the text color */
+    visibility: hidden; /* sets the visibility as hidden */
+    opacity: 0; /* sets opacity to 0 */
+    transition: all 0.3s ease; /* adds transition for all properties for a duration of 0.3s with ease */
+}
+    
+/* When the overlay is targeted, make it visible and move it to the top of the stack */
+.overlay1:target {
+    visibility: visible;
+    opacity: 1;
+    top: 0px;
+}
+    
+.popup1 {
+    border: none; /* removes border from popup box */
+    margin: 70px auto; /* centers the popup box horizontally */
+    padding: 20px; /* adds padding to the popup box */
+    border-radius: 5px; /* rounds the corners of the popup box */
+    width: 20%; /* sets the width of the popup box */
+    position: relative; /* sets the position of the popup box to relative */
+    background: #363535; /* sets the background color of the popup box */
+    color: rgb(138, 115, 115); /* sets the text color of the popup box */
+    z-index: 2; /* sets the stacking order of the popup box */
+    font-family: 'Press Start 2p';
+}
+
+.popup1 h2 {
+    color: rgb(138, 115, 115); /* sets the color of the heading text */
+    font-family: 'Press Start 2p'; /* sets the font family of the heading text */
+    margin-bottom: 20px; /* sets the margin at the bottom of the heading */
+    text-align: center; /* centers the text of the heading */
+    overflow: auto; /* allows the content to be scrolled if it exceeds the element's dimensions */
+}
+
+.popup1 .close1 {
+    position: absolute; /* sets the position of the element to absolute, relative to its parent element */
+    top: 100px; /* sets the distance from the top edge of the parent element */
+    right: 10px; /* sets the distance from the right edge of the parent element */
+    transition: all 100ms; /* sets the transition effect when the element is hovered over */
+    font-size: 21px; /* sets the font size of the element */
+    font-weight: bold; /* sets the font weight of the element */
+    text-decoration: none; /* removes any text decoration from the element */
+    color: rgb(138, 115, 115); /* sets the color of the element's text */
+}
+
+
+.popup1 .close1:hover {
+    color: red; /* set the hover color to red */
+}
+  
+
+  /* nav a:hover {
+    background-color: #333;
+  } */
+  
+/* Try your own styles on the <h1>, ,<img> */

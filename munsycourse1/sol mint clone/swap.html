@@ -1,0 +1,126 @@
+<!-- sets the type of page we create -->
+<!DOCTYPE html>
+
+<!-- sets the language on the page to english -->
+<html lang="en">
+
+<!-- stores the 'metadata' of the page behind the scenes -->
+<head>
+
+    <!-- set the character type for the webpage (this is the standard) -->
+    <meta charset="UTF-8">
+
+    <!-- sets the internet to use the best versions of the page possible -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- sets the internet to render the page correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- add a title to your webpage tab -->
+    <title>Frontend of My First dApp</title>
+
+    <!-- add an icon beside your title on the tab -->
+    <link rel="icon" href="fire1.jpg" type="image/x-icon">
+
+    <!-- link the css styles to the html page -->
+    <link rel="stylesheet" href="css/swap.css" type="text/css">
+
+    <!-- links to a Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- use clean spacing because you will get jammed up with trash tight code -->
+</head>
+
+<body>
+    <!-- header section starts here -->
+    <header>
+        <!-- title of the page -->
+        <h1>Ghost Gang Swap</h1>
+        <!-- navigation bar -->
+        <nav>
+            <!-- list of navigation links -->
+            <ul id="ULA">
+                <!-- navigation link 1 -->
+                <li>
+                    <!-- link to home page -->
+                    <a href="index.html">Home</a>
+                </li>
+                <!-- navigation link 2 -->
+                <li>
+                    <!-- link to mint.html file -->
+                    <a href="mintbtn.html">Mint</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- horizontal line -->
+        <hr>
+    </header>
+    <main>
+   
+    <!-- image of fire -->
+    <img src="fire1.jpg" alt="Mint Preview" title="MemeRace" width="400" height="267">
+        
+
+
+     <!-- section for swap form -->
+     <section id="swap-section">
+           <!-- heading for swap section -->
+           <h2>Swap your favourite tokens with Ghost Gang Swap</h2>
+           <!-- list for 'swap from' option -->
+           <ul id="ULB">Swap From
+              <li>
+                Solana
+              </li>
+           </ul>
+           <!-- list for 'swap to' option -->
+           <ul id="ULC">Swap To
+             <li>
+                Bonk
+             </li>
+           </ul>
+           <!-- form for swapping tokens -->
+           <form action="" method="get" class="form-example">
+             <!-- input for solana amount -->
+             <div class="form-example">
+                <label id="labelA" for="sol-amount">Amount of Sol: </label>
+                <input type="text" name="name" id="name" required>
+             </div>
+             <!-- submit button for form -->
+             <div class="box1"> <!-- creates a div element with a class for styling -->
+
+                <a class="button1" href="#pop1">Swap Tokens</a> <!-- creates a link with a class for styling and an anchor for pop-up content -->
+            
+            </div>
+            
+            <div id="pop1" class="overlay1"> <!-- creates a div element with an ID and a class for pop-up styling -->
+            
+                <div class="popup1"> <!-- creates a div element with a class for pop-up content styling -->
+            
+                    <h2>Token Swap Coming Soon!</h2> <!-- creates a heading element with the text "Token Swap Coming Soon!" -->
+            
+                    <a class="close1" href="#">&#10005</a> <!-- creates a link for closing the pop-up, with a class for styling and an anchor for the content -->
+                    
+                    <div class="content1"> <!-- creates a div element with a class for pop-up content styling -->
+            
+                        We're currently learning the skills required to swap tokens. <!-- displays text for the pop-up content -->
+            
+                    </div>
+            
+                </div>
+            
+            </div>
+           </form>
+     </section>
+    </main>
+<!-- horizontal line -->
+<hr>
+<!-- footer section -->
+<footer>
+    <!-- copyright text -->
+    <p>Cash Munsy &copy;</p>
+    <p><a href="https://twitter.com/cashmunsy">@cashmunsyrules</a> &copy;</p>
+</footer>
+
+</body>
+
+</html>
