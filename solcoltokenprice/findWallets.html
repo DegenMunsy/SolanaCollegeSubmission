@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SolCol Holder Tracker</title>
+    <link rel="stylesheet" href="findWallet.css">
+  </head>
+  <body>
+    <h1>Solana College x HelloMoon <br> Find Your Collections Holders</h1>
+
+    <form id="collection-form">
+      <h2>Find Collection by Name</h2>
+      <label for="collection-name">Collection Name:</label>
+      <input type="text" id="collection-name" name="collection-name">
+      <button type="submit">Find Collection</button>
+  </form>
+  <div class="ids" id="collection-app"></div>
+    
+    <form id="mints-form">
+        <h2>Find Mints by Owner</h2>
+        <label for="mints-collection-id">helloMoonCollectionId:</label>
+        <input type="text" id="mints-collection-id" name="mints-collection-id">
+        <label for="mints-limit">Results Per Page (1000 max):</label>
+        <input type="number" id="mints-limit" name="mints-limit" min="1" max="1000" value="1000">
+        <label for="mints-page"># of Pages to return:</label>
+        <input type="number" id="mints-page" name="mints-page" min="1" value="1">
+        <button type="submit">Find Mints</button>
+    </form>
+    <div class="addresses" id="mints-app"></div>
+
+    
+
+    <script src="findWallets.js"></script>
+  </body>
+</html>

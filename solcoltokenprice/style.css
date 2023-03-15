@@ -1,0 +1,142 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Set the background color of the page */
+body {
+  background-color: #383838; /* sets background color to light gray */
+  font-family: 'Press Start 2p'; /* sets font to Press Start 2P from Google Fonts */
+}
+
+/* Style the <h1> tag */
+h1 {
+  color: #e7e2d3; /* sets text color to black */
+  text-align: center; /* centers text */
+  font-size: 36px; /* sets font size to 36px */
+  font-weight: bold; /* sets font weight to bold */
+  margin-top: 50px; /* adds top margin of 50px */
+}
+
+/* Style the navigation links */
+nav {
+  background-color: #c135f8; /* sets background color to dark gray */
+  color: #e4e3ca; /* sets text color to white */
+  padding: 10px; /* adds padding of 10px */
+  margin-top: 20px; /* adds top margin of 20px */
+  display: flex; /* sets display to flex */
+  justify-content: space-between; /* evenly spaces navigation links */
+  align-items: center; /* centers navigation links vertically */
+  box-shadow: 0px 0px 10px #888; /* add a box shadow to the last box */
+}
+
+nav a {
+  color: #2bee6c; /* sets text color to white */
+  text-decoration: none; /* removes underline from links */
+  font-size: 18px; /* sets font size to 18px */
+  margin-right: 20px; /* adds right margin of 20px */
+  transition: color 0.3s ease; /* adds transition effect when changing text color */
+}
+
+nav a:hover {
+  color: #2bee6c; /* changes text color to light green on hover */
+}
+
+nav ul {
+  list-style: none; /* removes bullets from list */
+  display: flex; /* sets display to flex */
+  align-items: center; /* centers navigation links vertically */
+  margin: 0; /* removes margin */
+}
+
+nav ul li {
+  margin: 0 10px; /* adds left and right margin of 10px */
+}
+
+nav ul li a {
+  color: #e7e2d3; /* sets text color to white */
+  text-decoration: none; /* removes underline from links */
+  font-size: 18px; /* sets font size to 18px */
+  transition: color 0.3s ease; /* adds transition effect when changing text color */
+}
+
+nav ul li a:hover {
+  color: #2bee6c; /* changes text color to light green on hover */
+}
+
+nav .logo {
+  font-size: 24px; /* sets font size to 24px */
+  font-weight: bold; /* sets font weight to bold */
+  margin: 0; /* removes margin */
+}
+
+/* Style the boxes */
+.container {
+  display: flex; /* sets display to flex */
+  justify-content: center; /* centers content horizontally */
+  flex-wrap: wrap; /* allows boxes to wrap to new line if there is not enough space */
+  margin-top: 50px; /* adds top margin of 50px */
+}
+
+.box {
+  background-color: #c135f8; /* set the background color to white */
+  border-radius: 10px; /* round the corners of the box */
+  box-shadow: 0px 0px 10px #888; /* add a box shadow */
+  margin: 10px; /* add margin around the box */
+  padding: 30px; /* add padding inside the box */
+  text-align: center; /* center align text inside the box */
+  width: 250px; /* set the width of the box */
+  
+}
+
+.box button {
+  background-color: #2bee6c; /* set the background color of the button */
+  border: none; /* remove the border of the button */
+  border-radius: 5px; /* round the corners of the button */
+  color: #e7e2d3; /* set the text color of the button */
+  cursor: pointer; /* add a pointer cursor on hover */
+  font-size: 18px; /* set the font size of the button text */
+  padding: 10px; /* add padding inside the button */
+  width: 100%; /* set the width of the button */
+  margin-bottom: 20px; /* add margin below the button */
+  
+}
+
+.box button:hover {
+  background-color: #2bee6c; /* set the background color of the button on hover */
+}
+
+.box p {
+  font-size: 18px; /* set the font size of the paragraph text */
+  font-weight: bold; /* set the font weight of the paragraph text */
+  margin: 0; /* remove margin of the paragraph text */
+  padding-top: 1px;
+}
+
+.box span {
+  color: #2bee6c; /* set the color of the span text */
+  font-size: 20px; /* set the font size of the span text */
+  
+}
+
+/* Style the GST box to match the others */
+.box:last-of-type {
+  background-color: #c135f8; /* set the background color of the last box to white */
+  color: #e7e2d3; /* set the color of the last box text to black */
+  box-shadow: 0px 0px 10px #888; /* add a box shadow to the last box */
+}
+
+.box:last-of-type button {
+  background-color: #2bee6c; /* set the background color of the last box button */
+  color: #e7e2d3; /* set the color of the last box button text */
+}
+
+.box:last-of-type button:hover {
+  background-color: #2bee6c; /* set the background color of the last box button on hover */
+}
+
+.priceText {
+  color: #e7e2d3; /*set the color of the price text to white-ish*/
+}
+
+#priceText {
+  color: #e7e2d3; /*set the color of the price text for dust to white-ish*/
+}

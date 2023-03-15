@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+body {
+    background-color: #304650;
+    color: #ffffff;
+    font-family: 'Press Start 2p';
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  /* Mints form */
+  #mints-form {
+    background-color: #2bee6c;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  #mints-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #mints-form input[type="text"],
+  #mints-form input[type="number"] {
+    background-color: #304650;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  #mints-form button[type="submit"] {
+    background-color: #c135f8;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 5px 7px;font-family: 'Press Start 2p';
+  }
+  
+  #mints-app {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  /* Collection form */
+  #collection-form {
+    background-color: #2bee6c;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  #collection-form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #collection-form input[type="text"] {
+    background-color: #304650;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  #collection-form button[type="submit"] {
+    background-color: #c135f8;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 5px 7px;
+    font-family: 'Press Start 2p';
+  }
+  
+  #collection-app {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+  }
+  

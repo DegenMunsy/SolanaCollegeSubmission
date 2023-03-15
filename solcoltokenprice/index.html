@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Solana College x Hello Moon Coin Watch</title>
+
+  <!-- JS code built within an html doc is done in the head. We will start here and build this into two pages to follow best practices. -->
+	<script>
+  
+// This function retrieves the price of $Dust through the Hello Moon API and displays it on the webpage
+function getPrice() {
+  // Define an object containing the options for the HTTP request
+  const options = {
+    method: 'POST', // This specifies that the HTTP request method to be used is POST
+    headers: { // This specifies the headers of the request to be sent
+      accept: 'application/json', // This specifies that the server should respond with JSON format
+      'content-type': 'application/json', // This specifies that the request body should be in JSON format
+      authorization: 'Bearer db98e2f3-6d3b-48a2-8cc6-7e6d20b1e684' // This is an access token (Hello Moon API key) used for authentication
+    },
+    // This specifies the body of the request to be sent as a JSON string
+    // It contains the mint address of the token to retrieve the price for
+    body: JSON.stringify({mint: 'DUSTawucrTsGU8hcqRdHDCbuYhCPADMLM2VcCb8VnFnQ'})
+  };
+
+  // Send an HTTP request to the Hello Moon API endpoint to retrieve the price of a token
+  // The first argument is the URL of the Hello Moon API endpoint to send the request to
+  // The second argument is the options object containing information about the request
+  fetch('https://rest-api.hellomoon.io/v0/token/price', options)
+    .then(response => response.json()) // Parse the response as JSON
+    .then(response => {
+      // Retrieve the price value from the response and divide by 100 cents to get the dollar value
+      const price = response.data[0].price / 1000000;
+      // Get the DOM element that will display the price
+      const priceElement = document.getElementById('price');
+      // Update the element with the formatted price value
+      priceElement.innerHTML = price.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    })
+    .catch(err => console.error(err)); // Log any errors to the console
+}
+// In summary, getPrice() function retrieves the price of a token and displays it on the webpage. The function defines an object called options that includes various options for an HTTP request, such as the request method, request headers, and request body. The mint address of the token is specified in the request body as a JSON string. The access token included in the headers is used for authentication.
+
+// The fetch() method is used to send the HTTP request to the specified API endpoint to retrieve the price of the token. The first argument is the URL of the endpoint, and the second argument is the options object containing information about the request.
+
+// The response from the server is parsed as JSON using the response.json() method. The resulting JSON object is then used to extract the price value of the token, which is divided by 1000000 to convert it from cents to dollars. The price is then displayed on the webpage by updating the HTML content of an element with the ID price. If any errors occur during the process, they are logged to the console using the console.error() method.
+
+// Note that this function is specifically designed to retrieve the price of a particular token. If you want to retrieve the price of a different token, you will need to modify the mint address in the options object to the appropriate address for the token you are interested in.
+
+
+
+// This function retrieves the price of $HADES through the Hello Moon API and displays it on the webpage
+function getHadesPrice() {
+  // Define an object containing the options for the HTTP request
+  const options = {
+    method: 'POST', // This specifies that the HTTP request method to be used is POST
+    headers: { // This specifies the headers of the request to be sent
+      accept: 'application/json', // This specifies that the server should respond with JSON format
+      'content-type': 'application/json', // This specifies that the request body should be in JSON format
+      authorization: 'Bearer db98e2f3-6d3b-48a2-8cc6-7e6d20b1e684' // This is an access token(Hello Moon api key)  used for authentication
+    },
+    // This specifies the body of the request to be sent as a JSON string
+    // It contains the mint address of the Hades token to retrieve the price for
+    body: JSON.stringify({mint: 'BWXrrYFhT7bMHmNBFoQFWdsSgA3yXoAnMhDK6Fn1eSEn'})
+  };
+
+  // Send an HTTP request to the Hello Moon API endpoint to retrieve the price of the Hades token
+  // The first argument is the URL of the Hello Moon API endpoint to send the request to
+  // The second argument is the options object containing information about the request
+  fetch('https://rest-api.hellomoon.io/v0/token/price', options)
+    .then(response => response.json()) // Parse the response as JSON
+    .then(response => {
+      // Retrieve the price value from the response and divide by 100 cents to get the dollar value
+      const price = response.data[0].price / 1000000;
+      // Get the DOM element that will display the price
+      const priceElement = document.getElementById('hadesPrice');
+      // Update the element with the formatted price value
+      priceElement.innerHTML = price.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    })
+    .catch(err => console.error(err)); // Log any errors to the console
+}
+
+// In summary, getHadesPrice() function retrieves the price of a token called "Hades" and displays it on the webpage. The function defines an object called options that includes various options for an HTTP request, such as the request method, request headers, and request body. The mint address of the Hades token is specified in the request body as a JSON string. The access token included in the headers is used for authentication.
+
+// The fetch() method is used to send the HTTP request to the specified API endpoint to retrieve the price of the Hades token. The first argument is the URL of the endpoint, and the second argument is the options object containing information about the request.
+
+// The response from the server is parsed as JSON using the response.json() method. The resulting JSON object is then used to extract the price value of the Hades token, which is divided by 1000000 to convert it from cents to dollars. The price is then displayed on the webpage by updating the HTML content of an element with the ID hadesPrice. If any errors occur during the process, they are logged to the console using the console.error() method.
+
+// It's important to note that this function is specifically designed to retrieve the price of the "Hades" token. If you want to retrieve the price of a different token, you will need to modify the mint address in
+
+// This function retrieves the price of $RLB through the Hello Moon API and displays it on the webpage
+function getRLBPrice() {
+  // Define an object containing the options for the HTTP request
+  const options = {
+    method: 'POST', // This specifies that the HTTP request method to be used is POST
+    headers: { // This specifies the headers of the request to be sent
+      accept: 'application/json', // This specifies that the server should respond with JSON format
+      'content-type': 'application/json', // This specifies that the request body should be in JSON format
+      authorization: 'Bearer db98e2f3-6d3b-48a2-8cc6-7e6d20b1e684' // This is an access token (Hello Moon API) used for authentication
+    },
+    // This specifies the body of the request to be sent as a JSON string
+    // It contains the mint address of the RLB token to retrieve the price for
+    body: JSON.stringify({mint: 'RLBxxFkseAZ4RgJH3Sqn8jXxhmGoz9jWxDNJMh8pL7a'})
+  };
+
+  // Send an HTTP request to the Hello Moon API endpoint to retrieve the price of the RLB token
+  // The first argument is the URL of the Hello Moon API endpoint to send the request to
+  // The second argument is the options object containing information about the request
+  fetch('https://rest-api.hellomoon.io/v0/token/price', options)
+    .then(response => response.json()) // Parse the response as JSON
+    .then(response => {
+      // Retrieve the price value from the response and divide by 100 cents to get the dollar value
+      const price = response.data[0].price / 1000000;
+      // Get the DOM element that will display the price
+      const priceElement = document.getElementById('rlbPrice');
+      // Update the element with the formatted price value
+      priceElement.innerHTML = price.toLocaleString('en-US', {style: 'currency', currency: 'USD'});
+    })
+    .catch(err => console.error(err)); // Log any errors to the console
+}
+
+// In summary, getRLBPrice() function retrieves the price of a token called "RLB" and displays it on the webpage. The function defines an object called options that includes various options for an HTTP request, such as the request method, request headers, and request body. The mint address of the RLB token is specified in the request body as a JSON string. The access token included in the headers is used for authentication.
+
+// The fetch() method is used to send the HTTP request to the specified API endpoint to retrieve the price of the RLB token. The first argument is the URL of the endpoint, and the second argument is the options object containing information about the request.
+
+// The response from the server is parsed as JSON using the response.json() method. The resulting JSON object is then used to extract the price value of the RLB token, which is divided by 1000000 to convert it from cents to dollars. The price is then displayed on the webpage by updating the HTML content of an element with the ID rlbPrice. If any errors occur during the process, they are logged to the console using the console.error() method.
+
+
+// Add notes to the below function. Explain what each part of the code does. Use the above functions as a refernce. 
+// Try to change the class names within the html portion and css file to make the GST box match the others.
+
+        function getGSTPrice() {
+           const options = {
+            method: 'POST',
+            headers: {
+              accept: 'application/json',
+              'content-type': 'application/json',
+              authorization: 'Bearer db98e2f3-6d3b-48a2-8cc6-7e6d20b1e684'
+            },
+            body: JSON.stringify({mint: 'AFbX8oGjGpmVFywbVouvhQSRmiW2aR1mohfahi4Y2AdB'})
+        };
+
+        fetch('https://rest-api.hellomoon.io/v0/token/price', options)
+          .then(response => response.json())
+          .then(response => {
+            const price = response.data[0].price / 1000000; 
+            const priceElement = document.getElementById('gstPrice'); 
+            priceElement.innerHTML = price.toLocaleString('en-US', {style: 'currency', currency: 'USD'}); 
+          })
+          .catch(err => console.error(err));
+        }
+
+
+	</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+    <!-- This is a basic HTML page that displays the Solana College x Hello Moon Coin Tracker -->
+
+<!-- The <h1> tag displays the title of the page -->
+<h1>Solana College 🍕 Hello Moon Coin Tracker</h1>
+
+<!-- The <nav> tag is used to define a set of navigation links -->
+<nav>
+  <!-- The <ul> tag defines an unordered list -->
+  <ul>
+    <!-- Each <li> tag represents a list item -->
+    <li>
+      <!-- The <a> tag defines a hyperlink -->
+      <a href="https://www.dustprotocol.com/">$DUST</a>
+    </li>
+    <li>
+      <a href="https://www.hadeswap.com/">$HADES</a>
+    </li>
+    <li>
+      <a href="https://rollbit.com/">$RLB</a>
+    </li>
+    <li>
+      <a href="https://stepn.com/">$GST</a>
+    </li>
+    <li>
+      <a href="https://hellomoon.io/">HelloMoon</a>
+    </li>
+    <li>
+      <a href="floorTracker.html">Track YOUR Floors</a>
+    </li>
+    <li>
+      <a href="airdropWallets.html">Airdrop Your Holders</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- The <div> tag is used to group HTML elements together -->
+<!-- The "container" class is used to style this <div> element -->
+<div class="container">
+  <!-- The first "box" <div> element -->
+  <div class="box">
+    <!-- The <button> tag defines a clickable button -->
+    <!-- The onclick attribute specifies the JavaScript function to execute when the button is clicked -->
+    <button onclick="getPrice()">$DUST</button>
+    <!-- The <p> tag defines a paragraph -->
+    <!-- The <span> tag is used to define a small piece of text within a larger paragraph or line of text -->
+    <p id="priceText">DUST ($USD): <span id="price"></span></p>
+  </div>
+
+  <!-- The second "box" <div> element -->
+  <div class="box">
+    <button onclick="getHadesPrice()">$HADES</button>
+    <p class="priceText">HADES ($USD): <span id="hadesPrice"></span></p>
+  </div>
+
+  <!-- The third "box" <div> element -->
+  <div class="box">
+    <button onclick="getRLBPrice()">$RLB</button>
+    <p class="priceText">RLB ($USD): <span id="rlbPrice"></span></p>
+  </div>
+
+  <!-- The fourth "box" <div> element -->
+  <div class="box">
+    <button onclick="getGSTPrice()">$GST</button>
+    <p class="priceText">GST ($USD): <span id="gstPrice"></span></p>
+  </div>
+</div>
+<br>
+
+<!-- In summary, this HTML code defines a webpage that displays the Solana College Coin Tracker. The <h1> tag is used to display the title of the page. The <nav> tag is used to define a set of navigation links, each represented by an <a> tag with an href attribute that specifies the link to another webpage.
+
+The <div> tag is used to group related elements together, and the "container" class is used to style this <div> element. Within this <div> element, there are four other <div> elements with a class of "box", each representing a token that can be tracked.
+
+Each token is represented by a clickable button and a paragraph that displays the token symbol (e.g. $DUST) and its current price in USD. The current price is updated by JavaScript functions that are executed when the corresponding button is clicked. The current price is displayed using the <span> tag with an id attribute that corresponds to the JavaScript function used to --> 
+
+</body>
+</html>

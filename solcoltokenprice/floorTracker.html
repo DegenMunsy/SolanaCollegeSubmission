@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SolCol x HelloMoon Clayno Tracker</title>
+    <link rel="stylesheet" href="floorTracker.css">
+  </head>
+  <body>
+    <h1>Solana College🍕HelloMoon &#x1F995;&#x1F950;🛠️🥫🐟&#x1F4B2;&#x1F3F7;<br> Tracker</h1>
+    <div class="collection">
+      <h3 class="collection-name">Claynosaurz</h3>
+      <div id="claynosaurz" class="collection-data"></div>
+    </div>
+    <div class="collection">
+      <h3 class="collection-name">Croissants</h3>
+      <div id="croissants" class="collection-data"></div>
+    </div>
+    <div class="collection">
+      <h3 class="collection-name">Claymakers</h3>
+      <div id="claymakers" class="collection-data"></div>
+    </div>
+    <div class="collection">
+      <h3 class="collection-name">Clay</h3>
+      <div id="clay" class="collection-data"></div>
+    </div>
+    <div class="collection">
+      <h3 class="collection-name">Sardinhas</h3>
+      <div id="sardinhas" class="collection-data"></div>
+    </div>
+    <script>
+      // Configuration
+      const token = 'db98e2f3-6d3b-48a2-8cc6-7e6d20b1e684';
+      const collections = [
+        { id: 'd3a4ebf2ecbabac32a0351de9ef99ace', name: 'Claynosaurz' },
+        { id: '1783c1d7e412cc54365b639042035f25', name: 'Croissants' },
+        { id: 'c53acc20f48b3a3cc4ad69dbf606e060', name: 'Claymakers' },
+        { id: 'dc977fa63502b483b797a80d99976ac6', name: 'Clay' },
+        { id: 'ee1b0e4d2d02d214443aaabd1938664d', name: 'Sardinhas' },
+      ];
+
+      // Make API requests
+      const url = 'https://rest-api.hellomoon.io/v0/nft/collection/floorprice';
+      const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+        'Accept': 'application/json',
+      };
+      for (const collection of collections) {
+        const body = {
+          helloMoonCollectionId: collection.id,
+          limit: 50,
+          page: 1,
+        };
+        fetch(url, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify(body),
+        })
+          .then(response => response.json())
+          .then(data => {
+            // Format and display response
+            const responseElement = document.getElementById(collection.name.toLowerCase().replace(' ', '-'));
+            const { floorPriceLamports, volumeLamports } = data.data[0];
+            const floorPriceSol = (floorPriceLamports / 10 ** 9).toFixed(2);
+            const volumeSol = (volumeLamports / 10 ** 9).toFixed(2);
+            const listingCount = data.data[0].listing_count;
+            const formattedResponse = `
+              <p><strong>Floor Price:</strong> ${floorPriceSol} Solana</p>
+              <p><strong>Volume:</strong> ${volumeSol} Solana</p>
+              <p><strong>Listing Count:</strong> ${listingCount}</p>
+            `;
+            responseElement.innerHTML = formattedResponse;
+          })
+          .catch(error => console.error(error));
+      }
+    </script>
+  </body>
+</html>

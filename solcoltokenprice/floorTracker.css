@@ -1,0 +1,40 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Set the background color of the page */
+body {
+  background-color: #383838; /* sets background color to dark gray */
+  font-family: 'Press Start 2p'; /* sets font to Press Start 2P from Google Fonts */
+}
+
+/* Style the <h1> tag */
+h1 {
+  color: #e7e2d3; /* sets text color to white */
+  text-align: center; /* centers text */
+  font-size: 36px; /* sets font size to 36px */
+  font-weight: bold; /* sets font weight to bold */
+  margin-top: 50px; /* adds top margin of 50px */
+}
+
+/* Style the collections */
+.collection {
+  background-color: #c135f8; /* sets background color to purple */
+  border-radius: 10px; /* round the corners of the collection */
+  box-shadow: 0px 0px 10px #888; /* add a box shadow */
+  margin: 10px auto; /* add margin around the collection */
+  padding: 30px; /* add padding inside the collection */
+  text-align: center; /* center align text inside the collection */
+  width: 80%; /* set the width of the collection */
+}
+
+.collection-name {
+  color: #e7e2d3; /* sets text color to white */
+  font-size: 24px; /* sets font size to 24px */
+  margin: 0; /* removes margin */
+}
+
+.collection-data {
+  color: #e7e2d3; /* sets text color to white */
+  font-size: 18px; /* sets font size to 18px */
+  margin-top: 10px; /* adds top margin of 10px */
+}
